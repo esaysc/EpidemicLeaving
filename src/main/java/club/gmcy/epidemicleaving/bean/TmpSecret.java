@@ -1,4 +1,4 @@
-package com.esaysc.demo.entity;
+package club.gmcy.epidemicleaving.bean;
 
 import lombok.Data;
 

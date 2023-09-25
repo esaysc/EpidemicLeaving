@@ -5,13 +5,19 @@
  * Date: 2023-09-22 15:23
  * copyright(c)
  */
-package club.gmcy.sweb.controller;
+package club.gmcy.epidemicleaving.controller;
 
-import club.gmcy.sweb.service.LogService;
+import club.gmcy.epidemicleaving.dto.UserDTO;
+import club.gmcy.epidemicleaving.mapper.UserMapper;
+import club.gmcy.epidemicleaving.service.UserService;
+import club.gmcy.epidemicleaving.utils.JwtUtils;
+import club.gmcy.epidemicleaving.utils.Result;
+import club.gmcy.epidemicleaving.utils.StringUtil;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Version: V1.0
@@ -24,33 +30,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 public class LoggerController {
+    @Resource
+    private UserService userService;
     @Autowired
-    private LogService logService;
-    @GetMapping("/admin/log")
-    public String adminLog() {
-        log.info("请求到达/admin/log");
-        logService.adminLog();
-        return "管理员查询了日志";
-    }
+    private UserMapper userMapper;
 
-    @GetMapping("/manager/log")
-    public String managerLog() {
-        log.info("请求到达/manager/log");
-        logService.managerLog();
-        return "经理查询了日志";
-    }
-
-    @GetMapping("/log/query")
-    public String queryList() {
-        log.info("请求到达/log/query");
-        logService.queryList();
-        return "查询了日志";
-    }
-
-    @GetMapping("/log/delete")
-    public String delete() {
-        log.info("请求到达/log/delete");
-        logService.delete();
-        return "删除日志方法";
+    @PostMapping("/login")
+    @ResponseStatus(HttpStatus.OK) // 状态码 200
+    public Result login(@RequestBody UserDTO userDTO){
+        log.info("控制层操作 => 登录");
+        String username = userDTO.getUsername();
+        String password = userDTO.getPassword();
+        log.info("username => {}", username);
+        log.info("password => {}", password);
+        if(StringUtil.isEmpty(username) || StringUtil.isEmpty(password)){
+            return Result.error();
+        } else if (userService.login(userDTO)) {
+            String token = JwtUtils.generateToken(userDTO.getUsername());
+            System.out.println("token => " + token);
+            Integer userId = userService.selectIdByUsername(username);
+            return Result.ok().data("token",token).data("username",username).data("userId",userId);
+        } else{
+            return Result.error();
+        }
     }
 }

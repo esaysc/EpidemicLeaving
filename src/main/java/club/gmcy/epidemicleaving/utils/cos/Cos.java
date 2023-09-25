@@ -1,6 +1,6 @@
-package com.esaysc.demo.utils.cos;
+package club.gmcy.epidemicleaving.utils.cos;
 
-import com.esaysc.demo.entity.TmpSecret;
+import club.gmcy.epidemicleaving.bean.TmpSecret;
 import com.qcloud.cos.COSClient;
 import com.qcloud.cos.ClientConfig;
 import com.qcloud.cos.Headers;

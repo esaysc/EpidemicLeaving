@@ -1,6 +1,7 @@
-package com.esaysc.demo.utils.cos;
+package club.gmcy.epidemicleaving.utils.cos;
 
-import com.esaysc.demo.entity.TmpSecret;
+
+import club.gmcy.epidemicleaving.bean.TmpSecret;
 
 import java.util.HashMap;
 import java.util.Map;

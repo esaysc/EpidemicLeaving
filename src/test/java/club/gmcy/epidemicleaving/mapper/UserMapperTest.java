@@ -1,16 +1,11 @@
-package club.gmcy.sweb;
+package club.gmcy.epidemicleaving.mapper;
 
-import club.gmcy.persist.entity.User;
-import club.gmcy.persist.mapper.UserMapper;
+import club.gmcy.epidemicleaving.entity.User;
 import com.baomidou.mybatisplus.test.autoconfigure.MybatisPlusTest;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 // @RunWith(SpringRunner.class) // 如果是 Junit 4.x 则需要加 @RunWith，是 Jnit 5.x 就不需要加，因为内置了。（使自动注入生效）
 @MybatisPlusTest

@@ -1,4 +1,4 @@
-package com.esaysc.demo.utils;
+package club.gmcy.epidemicleaving.utils;
 
 /**
  * @Author: lbcf Email: lbcf@126.com

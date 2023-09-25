@@ -1,4 +1,4 @@
-package club.gmcy.persist.entity;
+package club.gmcy.epidemicleaving.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -53,6 +53,6 @@ public class User implements Serializable,Cloneable{
     /** 创建时间 */
     private Date gmtCreate ;
     /** 修改时间 */
-    private Date gmtModifyed ;
+    private Date gmtModified ;
 
 }

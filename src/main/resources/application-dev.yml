@@ -20,3 +20,6 @@ logging:
   level:
     club.gmcy.sweb: debug
 
+el:
+  jwt:
+    header: Authorization

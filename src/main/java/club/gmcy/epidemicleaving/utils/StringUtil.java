@@ -1,4 +1,4 @@
-package com.esaysc.demo.utils;
+package club.gmcy.epidemicleaving.utils;
 
 /**
  * Created with IntelliJ IDEA.

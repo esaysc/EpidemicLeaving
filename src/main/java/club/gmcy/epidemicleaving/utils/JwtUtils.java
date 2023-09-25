@@ -1,8 +1,11 @@
-package com.esaysc.demo.utils;
+package club.gmcy.epidemicleaving.utils;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
@@ -21,7 +24,11 @@ import java.util.Date;
  * @Date: 2022/12/4 12:38
  * @Version: 1.0
  */
+@Data
+@Component
+@ConfigurationProperties(prefix = "el.jwt")
 public class JwtUtils {
+    private String header;
     // 过期时间 7天
     private static long expire = 604800;
     // 32位密钥

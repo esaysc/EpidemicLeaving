@@ -5,7 +5,7 @@
  * Date: 2023-08-30 17:02
  * copyright(c)
  */
-package com.esaysc.demo.utils;
+package club.gmcy.epidemicleaving.utils;
 
 /**
  * @Version: V1.0

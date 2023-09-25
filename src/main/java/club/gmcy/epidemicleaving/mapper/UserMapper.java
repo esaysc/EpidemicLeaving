@@ -5,9 +5,9 @@
  * Date: 2023-09-24 14:49
  * copyright(c)
  */
-package club.gmcy.persist.mapper;
+package club.gmcy.epidemicleaving.mapper;
 
-import club.gmcy.persist.entity.User;
+import club.gmcy.epidemicleaving.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

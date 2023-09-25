@@ -1,4 +1,4 @@
-package com.esaysc.demo.utils;
+package club.gmcy.epidemicleaving.utils;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;

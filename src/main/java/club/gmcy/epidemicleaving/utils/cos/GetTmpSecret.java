@@ -1,6 +1,6 @@
-package com.esaysc.demo.utils.cos;
+package club.gmcy.epidemicleaving.utils.cos;
 
-import com.esaysc.demo.entity.TmpSecret;
+import club.gmcy.epidemicleaving.bean.TmpSecret;
 import com.tencent.cloud.CosStsClient;
 import com.tencent.cloud.Response;
 import org.springframework.jdbc.support.JdbcUtils;
@@ -23,7 +23,7 @@ public class GetTmpSecret {
 
 
     // 获取文章上传图片的临时 凭据
-    public TmpSecret getArticleImgCredential(String directoryName,String bucketName) {
+    public TmpSecret getArticleImgCredential(String directoryName, String bucketName) {
         return getTmpSecret(directoryName,bucketName);
     }
 

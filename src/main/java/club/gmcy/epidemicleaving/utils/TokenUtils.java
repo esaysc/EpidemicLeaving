@@ -5,7 +5,7 @@
  * Date: 2023-08-30 15:40
  * copyright(c)
  */
-package com.esaysc.demo.utils;
+package club.gmcy.epidemicleaving.utils;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
