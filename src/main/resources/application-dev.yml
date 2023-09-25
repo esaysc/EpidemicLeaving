@@ -1,0 +1,22 @@
+# 开发环境配置文件
+# 设置项目的端口号
+server:
+  port: 9081
+# 数据库环境配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:13306/epidemic_leaving?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: revilog22A@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # 配置认证的用户名和密码
+#  security:
+#    user:
+#      name: tom
+#      password: '{bcrypt}$2a$10$AC10u7LmIqqqsLhe46OoQe/B..vnpEmUSpdhxv5q6zonukFlI8yQG'
+
+# 日志级别配置
+logging:
+  level:
+    club.gmcy.sweb: debug
+

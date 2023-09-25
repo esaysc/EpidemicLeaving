@@ -1,0 +1,6 @@
+# \u8BBE\u7F6E\u5F53\u524D\u7684\u73AF\u5883
+spring:
+  profiles:
+    active: dev
+
+
